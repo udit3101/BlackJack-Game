@@ -32,7 +32,7 @@ class BlackjackApp2 extends StatelessWidget {
       // Navigate to another page after 3 seconds
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BlackjackApp1()),
+        MaterialPageRoute(builder: (context) => BlackjackScreen(name: "udit")),
       );
     });
 
@@ -40,40 +40,6 @@ class BlackjackApp2 extends StatelessWidget {
       body: Center(
         child: Lottie.asset('assets/dsd.json'),
       ),
-    );
-  }
-}
-
-
-
-class BlackjackApp1 extends StatelessWidget {
-  TextEditingController name = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-            color: Colors.green,
-            child: Column(
-              children: [
-                TextField(
-                  controller: name,
-                ),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  BlackjackScreen(name: "udit")));
-                    },
-                    child: Text("go")),
-
-
-              ],
-            )
-
-        )
     );
   }
 }
